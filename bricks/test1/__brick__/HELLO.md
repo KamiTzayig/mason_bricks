@@ -1,6 +1,7 @@
 Hello {{name}}!
 
-
+camelCase
+{{name.camelCase()}}
 constantCase
 {{name.constantCase()}}
 dotCase
