@@ -1,12 +1,12 @@
 name: feature_brick
 description: A brick to create a feature using best practices and your state management of choice!
-version: 0.6.2
+version: 0.6.3
 repository: https://github.com/KamiTzayig/mason_bricks/tree/master/bricks/feature2
 
 vars:
   feature_name:
     type: string
-    default: login2222
+    default: login3
     description: The feature name
     prompt: What is the feature name?
   state_management:
