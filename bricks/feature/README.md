@@ -7,7 +7,7 @@ Note: Since version 0.6.0, the brick now uses Super Initializers for features wi
 ## How to use 🚀
 
 ```
-mason make feature_brick --feature_name login --state_management bloc
+mason make feature --feature_name login --state_management bloc
 ```
 
 ## Variables ✨
@@ -20,7 +20,7 @@ mason make feature_brick --feature_name login --state_management bloc
 
 ## Outputs 📦
 
-See [feature_brick_tests](https://github.com/LukeMoody01/mason_bricks/tree/master/bricks/feature_brick_tests) for tests output
+See [feature_tests](https://github.com/LukeMoody01/mason_bricks/tree/master/bricks/feature_tests) for tests output
 
 ```
 --feature_name login --state_management bloc

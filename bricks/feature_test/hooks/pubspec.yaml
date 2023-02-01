@@ -1,4 +1,4 @@
-name: feature_brick_tests_hooks
+name: feature_tests_hooks
 
 environment:
   sdk: ">=2.12.0 <3.0.0"

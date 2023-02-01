@@ -5,12 +5,12 @@ A supporting brick to create your features tests with 100% coverage using best p
 ## How to use 🚀
 
 ```
-mason make feature_brick --feature_name login --state_management bloc
+mason make feature --feature_name login --state_management bloc
 ```
 
 ## Variables ✨
 
-N/A as this is a supporting brick for feature_brick
+N/A as this is a supporting brick for feature
 
 ## Outputs 📦
 
