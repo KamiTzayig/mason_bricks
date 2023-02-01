@@ -6,7 +6,7 @@ repository: https://github.com/KamiTzayig/mason_bricks/tree/master/bricks/featur
 vars:
   feature_name:
     type: string
-    default: login4
+    default: login5
     description: The feature name
     prompt: What is the feature name?
   state_management:
@@ -15,8 +15,8 @@ vars:
     description: The features state management
     prompt: What is the features state management?
     values:
-      - bloc
-      - cubit
-      - provider
+#      - bloc
+#      - cubit
+#      - provider
       - riverpod
-      - none
+#      - none

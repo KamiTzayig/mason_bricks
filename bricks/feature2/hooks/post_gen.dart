@@ -5,6 +5,12 @@ import 'package:mason/mason.dart';
 Future<void> run(HookContext context) async {
   final logger = context.logger;
   final directory = Directory.current.path;
+  print("hello!!!")
+  logger.alert(
+      red.wrap(
+        'helololololo',
+      ),
+    );
 
   List<String> folders;
   if (Platform.isWindows) {
