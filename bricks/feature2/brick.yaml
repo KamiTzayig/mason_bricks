@@ -6,7 +6,7 @@ repository: https://github.com/KamiTzayig/mason_bricks/tree/master/bricks/featur
 vars:
   feature_name:
     type: string
-    default: login
+    default: login2222
     description: The feature name
     prompt: What is the feature name?
   state_management:
