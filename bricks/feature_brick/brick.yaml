@@ -8,7 +8,7 @@ vars:
     type: string
     default: auth
     description: The feature name
-    prompt: What is the feature name?
+    prompt: What is the feature name??
   state_management:
     type: enum
     default: riverpod
