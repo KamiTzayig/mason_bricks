@@ -106,7 +106,7 @@ final featureBrickTestsBundle = MasonBundle.fromJson(<String, dynamic>{
   "version": "0.0.1",
   "environment": {"mason": ">=0.1.0-dev.26 <0.1.0"},
   "repository":
-      "https://github.com/KamiTzayig/mason_bricks/tree/master/bricks/feature_tests",
+      "https://github.com/KamiTzayig/mason_bricks/tree/master/bricks/feature_brick_tests",
   "readme": {
     "path": "README.md",
     "data":
