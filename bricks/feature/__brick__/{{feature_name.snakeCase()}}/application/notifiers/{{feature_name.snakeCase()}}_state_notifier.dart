@@ -4,11 +4,11 @@ import '../../domain/{{feature_name.snakeCase()}}_repository.dart';
 
 
 class {{feature_name.pascalCase()}}StateNotifier extends StateNotifier<bool> {
-  {{feature_name.pascalCase()}}() : super(False);
-  final {{feature_name.pascalCase()}}Repository _repository = const {{feature_name.pascalCase()}}RepositoryImplementation();
+  {{feature_name.pascalCase()}}StateNotifier() : super(false);
+  final {{feature_name.pascalCase()}}Repository _repository = {{feature_name.pascalCase()}}RepositoryImplementation();
 
-  Future<void> getPing() async{
-    reasult = await _repository.ping();
+  Future<void> getPing(String url) async{
+    bool result = await _repository.ping(url:url);
     state = result;
 
 }

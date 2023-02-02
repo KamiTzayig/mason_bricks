@@ -10,7 +10,7 @@ class {{feature_name.pascalCase()}}RepositoryImplementation implements {{feature
     // var response = await http.get(Uri.parse(url))
     // return response.statusCode == "200"? True: False;
 
-    return True;
+    return true;
 
 }
 
