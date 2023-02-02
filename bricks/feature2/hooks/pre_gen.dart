@@ -6,11 +6,7 @@ import 'package:yaml/yaml.dart';
 Future run(HookContext context) async {
   final logger = context.logger;
 
-  logger.alert(
-    red.wrap(
-      'kami',
-    ),
-  );
+
 
   final stateManagement =
       context.vars['state_management'].toString().toLowerCase();
@@ -20,11 +16,7 @@ Future run(HookContext context) async {
   final isRiverpod = stateManagement == 'riverpod';
   final isNone = !isBloc && !isCubit && !isProvider && !isRiverpod;
 
-  logger.alert(
-    red.wrap(
-      'kami2',
-    ),
-  );
+
   bool useEquatable = false;
   if (isBloc || isCubit) {
     useEquatable = context.logger.confirm(
@@ -33,11 +25,7 @@ Future run(HookContext context) async {
     );
   }
 
-  logger.alert(
-    red.wrap(
-      'kami3',
-    ),
-  );
+
 
   final directory = Directory.current.path;
   List<String> folders;
@@ -59,11 +47,7 @@ Future run(HookContext context) async {
       throw PubspecNameException();
     }
 
-    logger.alert(
-      red.wrap(
-        'kami4',
-      ),
-    );
+
     context.vars = {
       ...context.vars,
       'fullPath': ('$packageName/$featurePath/${context.vars['feature_name']}')
@@ -76,11 +60,7 @@ Future run(HookContext context) async {
       'use_equatable': useEquatable
     };
 
-    logger.alert(
-      red.wrap(
-        'kami6',
-      ),
-    );
+
   } on RangeError catch (_) {
     logger.alert(
       red.wrap(
@@ -114,11 +94,6 @@ Future run(HookContext context) async {
     );
     throw Exception();
   } on Exception catch (e) {
-    logger.alert(
-      red.wrap(
-        'kami ' +e.toString(),
-      ),
-    );
     throw e;
   }
 }
