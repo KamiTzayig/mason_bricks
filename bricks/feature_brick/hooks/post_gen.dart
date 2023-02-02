@@ -102,11 +102,11 @@ final featureBrickTestsBundle = MasonBundle.fromJson(<String, dynamic>{
   ],
   "name": "feature_tests",
   "description":
-      "A supporting brick for feature_brick that creates tests with 100% coverage",
+      "A supporting brick for feature that creates tests with 100% coverage",
   "version": "0.0.1",
   "environment": {"mason": ">=0.1.0-dev.26 <0.1.0"},
   "repository":
-      "https://github.com/KamiTzayig/mason_bricks/tree/master/bricks/feature_brick_tests",
+      "https://github.com/KamiTzayig/mason_bricks/tree/master/bricks/feature_tests",
   "readme": {
     "path": "README.md",
     "data":

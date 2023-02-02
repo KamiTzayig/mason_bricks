@@ -20,7 +20,7 @@
 
 # 0.3.0
 
-- 🎉: cubit option for feature_brick
+- 🎉: cubit option for feature
 - 🎉: Add more documentation for generated files
 
 # 0.2.2
