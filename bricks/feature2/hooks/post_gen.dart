@@ -4,12 +4,17 @@ import 'package:mason/mason.dart';
 
 Future<void> run(HookContext context) async {
   final logger = context.logger;
-  final directory = Directory.current.path;
   logger.alert(
       red.wrap(
         'kami1 post',
       ),
     );
+  final directory = Directory.current.path;
+  logger.alert(
+    red.wrap(
+      'kami1 post2',
+    ),
+  );
 
   List<String> folders;
   if (Platform.isWindows) {
