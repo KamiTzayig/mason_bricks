@@ -116,7 +116,7 @@ Future run(HookContext context) async {
   } on Exception catch (e) {
     logger.alert(
       red.wrap(
-        'kami ' +e,
+        'kami ' +e.toString(),
       ),
     );
     throw e;
