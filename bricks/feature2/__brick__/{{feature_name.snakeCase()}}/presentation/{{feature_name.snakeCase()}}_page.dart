@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';{{#isBloc}}
 import 'package:{{{fullPath}}}/bloc/bloc.dart';{{/isBloc}}{{#isCubit}}
 import 'package:{{{fullPath}}}/cubit/cubit.dart';{{/isCubit}}{{#isProvider}}
 import 'package:{{{fullPath}}}/provider/state.dart';{{/isProvider}}
-import 'package:{{{fullPath}}}/widgets/{{feature_name.snakeCase()}}_body.dart';
+import './widgets/{{feature_name.snakeCase()}}_body.dart';
 
 /// {@template {{feature_name.snakeCase()}}_page}
 /// A description for {{feature_name.pascalCase()}}Page

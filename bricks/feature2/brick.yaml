@@ -6,12 +6,12 @@ repository: https://github.com/KamiTzayig/mason_bricks/tree/master/bricks/featur
 vars:
   feature_name:
     type: string
-    default: login6
+    default: auth
     description: The feature name
     prompt: What is the feature name?
   state_management:
     type: enum
-    default: bloc
+    default: riverpod
     description: The features state management
     prompt: What is the features state management?
     values:

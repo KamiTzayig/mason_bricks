@@ -6,15 +6,10 @@ Future<void> run(HookContext context) async {
   final logger = context.logger;
   logger.alert(
       red.wrap(
-        'kami1 post',
+        'test1',
       ),
     );
   final directory = Directory.current.path;
-  logger.alert(
-    red.wrap(
-      'kami1 post2',
-    ),
-  );
 
   List<String> folders;
   if (Platform.isWindows) {
