@@ -1,6 +1,6 @@
 name: feature_brick
 description: A brick to create a feature using best practices and your state management of choice!
-version: 0.6.3
+version: 0.6.4
 repository: https://github.com/KamiTzayig/mason_bricks/tree/master/bricks/feature
 
 vars:
@@ -19,4 +19,4 @@ vars:
 #      - cubit
 #      - provider
       - riverpod
-#      - none
+      - none
