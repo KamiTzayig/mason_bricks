@@ -1,0 +1,5 @@
+/// initial constructor for {{model_name.pascalCase()}}
+  const {{model_name.pascalCase()}}.unknown():
+{{#properties}}
+    {{name}} = null ,{{/properties}};
+}

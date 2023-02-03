@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../../application/state.dart';
-import '../../../features/auth/provider/auth_provider.dart';
 
 
 /// {@template {{feature_name.snakeCase()}}_body}
@@ -38,7 +37,7 @@ class {{feature_name.pascalCase()}}Body {{#isBloc}}extends StatelessWidget{{/isB
   }{{/isProvider}}{{#isRiverpod}}
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final count = ref.watch({{feature_name.camelCase()}}Provider);
+    final count = ref.watch({{feature_name.camelCase()}}StateProvider);
     return Text(count.toString());
   }{{/isRiverpod}}{{#isNone}}
   @override
