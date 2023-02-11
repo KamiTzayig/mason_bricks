@@ -1,0 +1,12 @@
+{
+  "model_name": "auth state",
+  "additionals": ["copyWith", "equatable", "initial_constructor"],
+  "style": "basic",
+  "properties": [
+    { "name": "isLoading", "type": "bool" },
+    { "name": "authFailure", "type": "AuthFailure" },
+    { "name": "phoneNumber", "type": "PhoneNumber" },
+    { "name": "smsCode", "type": "SmsCode" },
+    { "name": "verificationId", "type": "VerificationId" }
+  ]
+}

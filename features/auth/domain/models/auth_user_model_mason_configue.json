@@ -1,0 +1,10 @@
+{
+  "model_name": "auth user",
+  "additionals": ["copyWith","json", "equatable", "initial_constructor"],
+  "style": "freezed",
+  "properties": [
+    { "name": "userId", "type": "UserId" },
+    { "name": "phoneNumber", "type": "PhoneNumber" },
+    { "name": "fullName", "type": "String" }
+  ]
+}
