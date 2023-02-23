@@ -7,3 +7,4 @@ final authStateProvider = StateNotifierProvider<AuthStateNotifier, AuthState>((r
 return AuthStateNotifier();
 });
 
+//todo maybe need here auto dispose

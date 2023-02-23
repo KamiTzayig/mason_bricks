@@ -31,6 +31,8 @@ class AuthRepositoryFirebase implements AuthRepository {
   Future<Either<AuthFailure, bool>> validatePhoneNumber({
     required PhoneNumber phoneNumber,
   }) async {
+    // todo optional if needed to validate the phone number through the backend
+   // implement your own method
     final functions = FirebaseFunctions.instance;
 
     try {

@@ -150,7 +150,7 @@ class AuthBody extends ConsumerWidget {
                                 phoneNumber: phoneNumber);
                           }
                         },
-                        child: Text("שליחה")),
+                        child: Text("שליחה"),),
                     SizedBox(width: 10),
                     Directionality(
                       textDirection: TextDirection.ltr,
