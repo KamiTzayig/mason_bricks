@@ -37,7 +37,7 @@ Future<void> run(HookContext context) async {
   context.vars = {
     ...context.vars,
     'hasRelations': hasRelations,
-    'use_initail_constructor': additionals.contains('initail_constructor'),
+    'use_initial_constructor': additionals.contains('initial_constructor'),
     'use_copywith': additionals.contains('copyWith'),
     'use_json': additionals.contains('json'),
     'use_equatable': additionals.contains('equatable'),
