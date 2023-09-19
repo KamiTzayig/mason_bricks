@@ -15,10 +15,17 @@ final dataTypes = [
   'dynamic',
   'Set',
   'DateTime',
+
+];
+
+
+final mapTypes = [
   'Map<String, dynamic>',
   'Map<String, String>',
   'Map<int, String>',
   'Map<int, int>',
+  'Map<int, dynamic>',
+  'Map<String, int>',
 ];
 
 Future<void> run(HookContext context) async {
@@ -237,9 +244,9 @@ Map<String, dynamic> _getCustomListProperties(
     };
   }
   final startIndex = propertyType.indexOf('<');
-  final endIndex = propertyType.indexOf('>');
+  final endIndex = propertyType.lastIndexOf('>');
   final listType = propertyType.substring(startIndex + 1, endIndex).trim();
-  if (dataTypes.contains(listType.cleaned)) {
+  if (dataTypes.contains(listType.cleaned) || mapTypes.contains(listType.cleaned)){
     return {
       'isCustomList': false,
       'listType': listType,
