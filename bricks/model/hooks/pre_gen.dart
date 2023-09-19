@@ -197,9 +197,9 @@ String _addInitialValue(
     return '{}';
   }
 
-
-
-
+  if (mapTypes.contains(property.type)) {
+    return '{}';
+  }
 
   return 'null';
 }
