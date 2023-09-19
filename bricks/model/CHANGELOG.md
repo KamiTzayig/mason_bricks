@@ -28,7 +28,7 @@
 
 - cleanup: Make use of partials for better maintainability
 
-- Thanks to @LosDanieloss for his PR addressing freezed support and laying out the initial work for it!
+- Thanks to @LosDanieloss for his PR addressing freezed support and laying out the initail_constructor work for it!
 
 # 0.3.7
 
@@ -100,4 +100,4 @@
 
 # 0.0.1
 
-- Create initial Model Brick
+- Create initail_constructor Model Brick

@@ -9,8 +9,8 @@ class {{model_name.pascalCase()}}{{#use_equatable}} extends Equatable{{/use_equa
     {{^isNullable}}required {{/isNullable}}this.{{name}},{{/properties}}
   }{{/hasProperties}});
 
-  {{#use_initial}}
-    {{> initial }}{{/use_initial}}
+  {{#use_initail_constructor}}
+    {{> initail_constructor }}{{/use_initail_constructor}}
 {{#use_json}}
   {{> basic_from_json }}{{/use_json}}
 {{#properties}}

@@ -1,4 +1,4 @@
-/// initial constructor for {{model_name.pascalCase()}}
-  const {{model_name.pascalCase()}}.unknown():{{#properties}}
-    {{name}} = '' ,{{/properties}};
+/// initail constructor for {{model_name.pascalCase()}}
+{{model_name.pascalCase()}}.unknown():{{#properties}}
+    {{name}} = {{initial_value}},{{/properties}};
 

@@ -37,7 +37,7 @@ Future<void> run(HookContext context) async {
   context.vars = {
     ...context.vars,
     'hasRelations': hasRelations,
-    'use_initial': additionals.contains('initial_constructor'),
+    'use_initail_constructor': additionals.contains('initail_constructor'),
     'use_copywith': additionals.contains('copyWith'),
     'use_json': additionals.contains('json'),
     'use_equatable': additionals.contains('equatable'),
@@ -152,6 +152,7 @@ void _addProperty(
   final listProperties = _getCustomListProperties(hasSpecial, property.type);
   final isCustomDataType =
       !dataTypes.contains(property.type.cleaned) && !hasSpecial;
+  final initialValue = _addInitialValue(property);
   properties.add({
     'name': property.name,
     'type': property.type,
@@ -160,8 +161,47 @@ void _addProperty(
     'isCustomDataType': isCustomDataType,
     'isCustomList': listProperties['isCustomList'],
     'listType': listProperties['listType'],
+    'initialValue': initialValue,
   });
 }
+
+/// Adds the initial value to the property
+String _addInitialValue(
+  Property property,
+) {
+  if (property.isNullable) {
+    return 'null';
+  }
+
+  if (property.type == 'String') {
+    return "''";
+  }
+
+  if (property.type == 'int' || property.type == 'double') {
+    return '0';
+  }
+
+  if (property.type == 'bool') {
+    return 'false';
+  }
+
+  if (property.type == 'DateTime') {
+    return 'DateTime.now()';
+  }
+
+  if (property.type == 'List') {
+    return '[]';
+  }
+
+  if (property.type == 'Map') {
+    return '{}';
+  }
+
+  return 'null';
+}
+
+
+
 
 /// Checks to see if the current output directory is in the
 /// lib folder.
