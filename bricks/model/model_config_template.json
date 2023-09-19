@@ -4,7 +4,7 @@
   "style": "json_serializable",
   "relations": [{ "name": "user" }],
   "properties": [
-    { "name": "firstName", "type": "String?" },
+    { "name": "firstName", "type": "String?", },
     { "name": "lastName", "type": "String?" },
     { "name": "age", "type": "int" },
     { "name": "isHappy", "type": "bool" },

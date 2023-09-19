@@ -162,6 +162,7 @@ void _addProperty(
     'isCustomList': listProperties['isCustomList'],
     'listType': listProperties['listType'],
     'initialValue': initialValue,
+    'typedefName': property.typedefName ?? property.type,
   });
 }
 
@@ -306,17 +307,20 @@ class Property {
   const Property({
     required this.name,
     required this.type,
+    this.typedefName,
     this.isNullable = false,
   });
 
   final String name;
   final String type;
   final bool isNullable;
+  final typedefName;
 
   factory Property.fromMap(Map<String, dynamic> map) {
     return Property(
         name: map['name'],
         type: map['type'],
+        typedefName: map['typedefName'],
         isNullable: (map['type'] as String).endsWith("?"));
   }
 

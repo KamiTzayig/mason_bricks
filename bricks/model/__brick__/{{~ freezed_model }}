@@ -13,7 +13,7 @@ part '{{model_name.snakeCase()}}.freezed.dart';
 class {{model_name.pascalCase()}} with _${{model_name.pascalCase()}} {
   /// {@macro {{{model_name.snakeCase()}}}}
   const factory {{model_name.pascalCase()}}({{#hasProperties}}{ {{#properties}}
-    {{^isNullable}}required {{/isNullable}}{{#hasSpecial}}{{{type}}}{{/hasSpecial}}{{^hasSpecial}}{{type}}{{/hasSpecial}} {{name}},{{/properties}}
+    {{^isNullable}}required {{/isNullable}}{{#hasSpecial}}{{{typedefName}}}{{/hasSpecial}}{{^hasSpecial}}{{typedefName}}{{/hasSpecial}} {{name}},{{/properties}}
   }{{/hasProperties}}) = _{{model_name.pascalCase()}};
   {{#use_json}}
   {{> serializable_from_json }}{{/use_json}}
