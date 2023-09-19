@@ -189,13 +189,17 @@ String _addInitialValue(
     return 'DateTime.now()';
   }
 
-  if (property.type == 'List') {
+  if (property.type.toLowerCase().contains('List')) {
     return '[]';
   }
 
   if (property.type == 'Map') {
     return '{}';
   }
+
+
+
+
 
   return 'null';
 }
