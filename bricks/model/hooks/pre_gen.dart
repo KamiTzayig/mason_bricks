@@ -15,6 +15,10 @@ final dataTypes = [
   'dynamic',
   'Set',
   'DateTime',
+  'Map<String, dynamic>',
+  'Map<String, String>',
+  'Map<int, String>',
+  'Map<int, int>',
 ];
 
 Future<void> run(HookContext context) async {
@@ -147,7 +151,8 @@ void _addProperty(
     'isNullable': property.isNullable,
     'hasSpecial': hasSpecial,
     'isCustomDataType': isCustomDataType,
-    ...listProperties,
+    'isCustomList': listProperties['isCustomList'],
+    'listType': listProperties['listType'],
   });
 }
 
@@ -225,9 +230,10 @@ Map<String, dynamic> _getCustomListProperties(
   bool hasSpecial,
   String propertyType,
 ) {
-  if (!hasSpecial || !propertyType.contains('List')) {
+  if (!hasSpecial || !propertyType.toLowerCase().contains('list')) {
     return {
       'isCustomList': false,
+      'listType': '',
     };
   }
   final startIndex = propertyType.indexOf('<');
@@ -236,11 +242,12 @@ Map<String, dynamic> _getCustomListProperties(
   if (dataTypes.contains(listType.cleaned)) {
     return {
       'isCustomList': false,
+      'listType': listType,
     };
   }
   return {
     'isCustomList': true,
-    'customListType': listType,
+    'listType': listType,
   };
 }
 
