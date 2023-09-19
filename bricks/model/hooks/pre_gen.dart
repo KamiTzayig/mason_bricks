@@ -189,7 +189,7 @@ String _addInitialValue(
     return 'DateTime.now()';
   }
 
-  if (property.type.toLowerCase().contains('List')) {
+  if (property.type.toLowerCase().contains('list')) {
     return '[]';
   }
 
